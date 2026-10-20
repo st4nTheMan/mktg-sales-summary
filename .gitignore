@@ -1,0 +1,12 @@
+# Local database configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and operating system files
+*.log
+.DS_Store
+Thumbs.db
+
+# Local editor settings
+.idea/
