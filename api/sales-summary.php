@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../database/connection.php';
+require_once __DIR__ . '/../database/sales_summary.php';
 
 header('Content-Type: application/json');
 
@@ -14,3 +14,4 @@ $storeName = isset($_GET['store_name']) ? trim($_GET['store_name']) : '';
 $salesSummaryResult = getSalesSummaryRows($databaseConfig, $currentPage, 31, $dateFrom, $dateTo, $storeName);
 
 echo json_encode($salesSummaryResult);
+

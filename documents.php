@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/database/connection.php';
+require_once __DIR__ . '/database/document_transactions.php';
 
 $databaseConfig = require __DIR__ . '/config/database.php';
 
@@ -15,3 +15,4 @@ $perPage = 50;
 $documentResult = getDocumentRows($databaseConfig, $currentPage, $perPage, $search, $storeName, $dateFrom, $dateTo);
 
 require __DIR__ . '/app/views/documents-table.php';
+

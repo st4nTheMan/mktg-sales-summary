@@ -177,7 +177,9 @@ require __DIR__ . '/components/header.php';
                                             <?php if (strcasecmp($column, 'sid') === 0) continue; ?>
                                             <?php if (strcasecmp($column, 'TRANSACTION_TOTAL_AMT') === 0 || in_array(strtoupper($column), array('LOYALTY POINTS', 'LOYALTY_POINTS', 'LTY_BALANCE'))): ?>
                                                 <td class="text-end font-monospace"><?php echo htmlentities((string) $value, ENT_QUOTES, 'UTF-8'); ?></td>
-                                            <?php elseif (in_array(strtoupper($column), array('DOC_NO', 'CUST_ID', 'BA CARD NO.', 'BA_CARD_NO', 'CREATED_DATETIME', 'CONTACT NUMBER', 'PHONE_NO'))): ?>
+                                            <?php elseif (strcasecmp($column, 'DOC_NO') === 0): ?>
+                                                <td class="font-monospace"><a href="http://localhost/prism-inquiryy/hwoc/invoice.php?id=<?php echo rawurlencode((string) $row['SID']); ?>" target="_blank" rel="noopener noreferrer"><?php echo htmlentities((string) $value, ENT_QUOTES, 'UTF-8'); ?></a></td>
+                                            <?php elseif (in_array(strtoupper($column), array('CUST_ID', 'BA CARD NO.', 'BA_CARD_NO', 'CREATED_DATETIME', 'CONTACT NUMBER', 'PHONE_NO'))): ?>
                                                 <td class="font-monospace"><?php echo htmlentities((string) $value, ENT_QUOTES, 'UTF-8'); ?></td>
                                             <?php else: ?>
                                                 <td><?php echo htmlentities((string) $value, ENT_QUOTES, 'UTF-8'); ?></td>

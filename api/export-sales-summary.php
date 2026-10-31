@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../database/connection.php';
+require_once __DIR__ . '/../database/sales_summary.php';
 require_once __DIR__ . '/../database/xlsx_writer.php';
 
 $databaseConfig = require __DIR__ . '/../config/database.php';
@@ -84,3 +84,4 @@ if (!empty($exportResult['rows'])) {
 
 fclose($output);
 exit;
+

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/database/connection.php';
+require_once __DIR__ . '/database/sales_summary.php';
 
 $databaseConfig = require __DIR__ . '/config/database.php';
 
@@ -12,3 +12,4 @@ $storeName = isset($_GET['store_name']) ? trim($_GET['store_name']) : '';
 $salesSummaryResult = getSalesSummaryRows($databaseConfig, $currentPage, 31, $dateFrom, $dateTo, $storeName);
 
 require __DIR__ . '/app/views/sales-summary-table.php';
+

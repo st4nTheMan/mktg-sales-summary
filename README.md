@@ -74,7 +74,10 @@ api/                    JSON and export endpoints
 app/helpers/            Shared PHP helpers
 app/views/              Report pages and reusable view components
 config/                 Environment-based configuration
-database/               Oracle queries and XLSX writer
+database/               Shared Oracle connection helpers, report queries, and XLSX writer
+  connection.php        Shared Oracle connection, date, and pagination helpers
+  sales_summary.php     Sales summary filters, queries, and formatting
+  document_transactions.php  Document transaction search, queries, and formatting
 public/css/              Application styles
 public/images/           Static images and favicon
 public/js/               Browser-side report interactions

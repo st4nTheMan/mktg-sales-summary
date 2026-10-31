@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../database/connection.php';
+require_once __DIR__ . '/../database/document_transactions.php';
 require_once __DIR__ . '/../database/xlsx_writer.php';
 
 $databaseConfig = require __DIR__ . '/../config/database.php';
@@ -72,3 +72,4 @@ foreach ($exportResult['rows'] as $row) {
 
 fclose($output);
 exit;
+
